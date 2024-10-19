@@ -16,20 +16,6 @@ This project is a chatbot application designed to help users book appointments. 
 - **NLP/AI**: OpenAI GPT-3.5 (using the OpenAI API)
 - **Frontend**: HTML5, CSS3 (no JavaScript)
 - **Hosting**: Flask runs locally or can be deployed on cloud platforms.
-# **Appointment Booking Chatbot using Flask, OpenAI GPT, and MySQL**
 
 ## **Project Structure**
-appointment-booking/ │ ├── templates/ │ ├── index.html # Main UI for the appointment system ├── static/ │ ├── style.css # CSS file for styling the UI ├── app.py # Flask app containing backend logic 
-## **Step-by-Step Guide**
-
-### 1. **Clone the Repository**
-git clone <repository-url>
-cd appointment-booking
-###2. **Install Dependencies**
-Create and activate a virtual environment:
--python -m venv venv
--source venv/bin/activate 
-###3.**Configure OpenAI API Key**
-    -openai.api_key = 'YOUR_OPENAI_API_KEY'.
-###4.**Run the Flask Application**
-        -python app.py
+appointment-booking/ │ ├── templates/ │ ├── index.html # Main UI for the appointment system ├── static/ │ ├── style.css # CSS file for styling the UI ├── app.py # Flask app containing backend logic.
