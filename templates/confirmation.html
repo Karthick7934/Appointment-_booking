@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Appointment Confirmed!</h1>
+        <p>Thank you for booking your appointment. We look forward to seeing you!</p>
+        <a href="/">Book Another Appointment</a>
+        <form method="POST">
+            <input type="text" name="name" placeholder="user input" required>
+            <button type="submit">submit</button>
+        </form>
+        <p>
+           
+            {{data}}
+           
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Your Appointment</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="notification">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <form method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="phone" placeholder="Your Phone Number" required>
+            <input type="number" name="age" placeholder="Your Age" required>
+            <select name="selected_time" id="slots" required>
+                <option value="">Select a slot</option>
+                {% for slot in available_slots %}
+                    <option value="{{ slot }}">{{ slot.strftime('%Y-%m-%d %H:%M') }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+</body>
+</html>
